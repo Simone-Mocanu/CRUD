@@ -69,11 +69,13 @@
                         <td class="align-middle"><?php echo $row['oras'] ?></td>
                         <td class="align-middle"><?php echo $row['tara'] ?></td>
                         <td class="align-middle"><?php echo $row['cod_postal'] ?></td>
-                        <td class="align-middle">
-                            <button type="button" class="btn btn-outline-success m-2"
-                                onclick="location.href='edit.php?id=<?php echo $row['id']; ?>'">Editeaza</button>
+                        <td class="">
+                            <div class="d-flex">
+                                <button type="button" class="btn btn-outline-success m-2"
+                                    onclick="location.href='edit.php?id=<?php echo $row['id']; ?>'">Editeaza</button>
 
-                            <?php echo ' <button onclick="openModal(' . $student_id . ')" type="button" class="btn btn-outline-danger m-2" > Sterge </button> ' ?>
+                                <?php echo ' <button onclick="openModal(' . $student_id . ')" type="button" class="btn btn-outline-danger m-2" > Sterge </button> ' ?>
+                            </div>
 
                         </td>
                     </tr>
