@@ -16,10 +16,11 @@ $query = 'SELECT * FROM studenti';
 $result = mysqli_query($con, $query);
 
 ?>
+<div class="container mt-5">
+<h1 class="display-5">Lista studentilor</h1>
+<button type="button" class="btn btn-success mt-3" onclick="location.href='edit.php'">Adauga student</button>
 
-<h3>Lista studentilor</h3>
-<p><a href="add.php" title="Adauga student">Adauga student</a></p>
-
+</div>
 <?php
 if(mysqli_num_rows($result) == 0) {
 ?>
@@ -32,7 +33,8 @@ if(mysqli_num_rows($result) == 0) {
 } else {
 ?>
 
-<table border="1" class="table">
+<div class="container mt-4">
+<table class="table">
     <tr>
         <th>Nume</th>
         <th>Prenume</th>
@@ -59,8 +61,8 @@ if(mysqli_num_rows($result) == 0) {
         <td><?php echo $row['oras']?></td>
         <td><?php echo $row['tara']?></td>
         <td><?php echo $row['cod_postal']?></td>
-        <td><a href="edit.php?id=<?php echo $row['id'];?>" title="Editeaza">Editeaza</a></td>
-        <td><a href="delete.php?id=<?php echo $row['id'];?>" title="Sterge" onclick="return confirm('Sigur vrei sa stergi?')">Sterge</a></td>
+        <td ><button type="button" class="btn btn-outline-success" onclick="location.href='edit.php?id=<?php echo $row['id'];?>'">Editeaza</button>
+        <button type="button" class="btn btn-outline-danger" onclick="location.href='delete.php?id=<?php echo $row['id'];?>'">Sterge</button></td>
     </tr>
 
 <?php
@@ -68,6 +70,7 @@ if(mysqli_num_rows($result) == 0) {
 ?>
 
 </table>
+</div>
 <?php } ?>
 </body>
 </html>
