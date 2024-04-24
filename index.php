@@ -24,7 +24,7 @@
     ?>
     <div class="container mt-5">
         <h1 class="display-5">Lista studentilor</h1>
-        <button type="button" class="btn btn-success" onclick="location.href='edit.php'">Adauga student</button>
+        <button type="button" class="btn btn-success" onclick="location.href='add.php'">Adauga student</button>
 
 
     </div>
@@ -54,6 +54,7 @@
                     <th>Cod postal</th>
                     <th colspan="2">Actiuni</th>
                 </tr>
+
                 <?php
                 while ($row = mysqli_fetch_assoc($result)) {
                     $student_id = $row['id'];
@@ -71,41 +72,41 @@
                         <td class="align-middle"><?php echo $row['cod_postal'] ?></td>
                         <td class="">
                             <div class="d-flex">
-                                <button type="button" class="btn btn-outline-success m-2"
+                                <button type="button" class="btn btn-outline-success m-2 "
                                     onclick="location.href='edit.php?id=<?php echo $row['id']; ?>'">Editeaza</button>
 
-                                <?php echo ' <button onclick="openModal(' . $student_id . ')" type="button" class="btn btn-outline-danger m-2" > Sterge </button> ' ?>
+                                <?php echo ' <button onclick="openModal(' . $student_id . ')" type="button" class="btn btn-outline-danger m-2 " > Sterge </button> ' ?>
                             </div>
-
                         </td>
                     </tr>
+            </div>
+            </td>
+            </tr>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Confirma</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Esti sigur?
-                                    <p>ID: <span id="spanIdModal"></span></p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Inchide</button>
-                                    <button id="buttonDeleteModal" type="button" class="btn btn-danger m-2"
-                                        onclick="location.href='delete.php?id=<?php echo $row['id']; ?>'">Sterge</button>
-                                </div>
-                            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Confirma</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Esti sigur?
+                            <p>ID: <span id="spanIdModal"></span></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Inchide</button>
+                            <button id="buttonDeleteModal" type="button" class="btn btn-danger m-2">Sterge</button>
                         </div>
                     </div>
-                    <?php
+                </div>
+            </div>
+            <?php
                 }
                 ?>
 
-            </table>
+        </table>
         </div>
     <?php } ?>
 </body>
