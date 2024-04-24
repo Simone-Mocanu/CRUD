@@ -40,53 +40,53 @@
 
     ?>
 
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5">
         <h1 class="display-5">Adauga student</h1>
 
         <div class="mt-4">
             <form action="add.php" method="post">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nume</label>
-                    <input type="text" class="form-control" name="nume" aria-describedby="emailHelp">
+                    <label class="form-label">Nume</label>
+                    <input type="text" class="form-control" name="nume">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Prenume</label>
+                    <label class="form-label">Prenume</label>
                     <input type="text" class="form-control" name="prenume">
                 </div>
 
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Email</label>
+                    <label class="form-label">Email</label>
                     <input type="email" class="form-control" name="email">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Telefon</label>
+                    <label class="form-label">Telefon</label>
                     <input type="text" class="form-control" name="telefon">
                 </div>
 
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Data nastere</label>
+                    <label class="form-label">Data nastere</label>
                     <input type="datetime-local" class="form-control" name="data_nastere">
                 </div>
 
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Adresa</label>
+                    <label class="form-label">Adresa</label>
                     <input type="text" class="form-control" name="adresa">
                 </div>
 
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Oras</label>
+                    <label class="form-label">Oras</label>
                     <input type="text" class="form-control" name="oras">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Tara</label>
+                    <label class="form-label">Tara</label>
                     <input type="text" class="form-control" name="tara">
                 </div>
 
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Cod postal</label>
+                    <label class="form-label">Cod postal</label>
                     <input type="text" class="form-control" name="cod_postal">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Adauga</button>
             </form>
         </div>
     </div>
